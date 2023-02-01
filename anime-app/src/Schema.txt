@@ -1,0 +1,21 @@
+CREATE SCHEMA IF NOT EXISTS anime_app;
+
+CREATE TABLE IF NOT EXISTS anime_app.animedb_api (
+    _id  text,
+    title text,
+	alternativeTitles text[],
+	ranking bigint,
+	genres text[],
+	episodes bigint,
+	hasEpisode boolean,
+	hasRanking boolean,
+	image text,
+	link text,
+	status text,
+	synopsis text,
+	thumb text,
+	type text
+);
+
+INSERT INTO anime_app.animedb_api (_id, title, alternativeTitles, ranking, genres, episodes, hasEpisode, hasRanking, image, link, status, synopsis, thumb, type) 
+VALUES ('41467', 'Bleach: Sennen Kessen-hen', ARRAY ['Bleach: Thousand-Year Blood War Arc', 'BLEACH 千年血戦篇', 'Bleach: Thousand-Year Blood War'], 1, ARRAY ['Action', 'Adventure', 'Fantasy'], 0, false, true, 'https://cdn.myanimelist.net/images/anime/1764/126627.jpg', 'https://myanimelist.net/anime/41467/Bleach__Sennen_Kessen-hen', 'Not yet aired', 'Synopsis', 'https://cdn.myanimelist.net/r/50x70/images/anime/1764/126627.jpg?s=196ea098ac1becd97fc0a4b50a949c2b', 'TV');
