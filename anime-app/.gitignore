@@ -22,4 +22,6 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 
+
+anime-app/src/keys.txt
 src/keys.txt
