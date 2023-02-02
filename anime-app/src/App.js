@@ -3,7 +3,7 @@ import './App.css';
 import {XRapidAPIKey, XRapidAPIHost} from './keys.js';
 import axios from 'axios';
 import './DatabaseAnimeDB.js';
-import readDatabase from './DatabaseAnimeDB.js';
+
 
 const options = {
   method: 'GET',
