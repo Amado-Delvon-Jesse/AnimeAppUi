@@ -88,7 +88,7 @@ axios.request(options).then(function (response) {
   let jsonContent = JSON.stringify(jsonData);
   console.log(jsonContent);
 
-  fs.writeFileSync("AnimeBD_Data.json", jsonContent, 'utf-8', function(err){
+  fs.writeFileSync("AnimeDB_Data.json", jsonContent, 'utf-8', function(err){
     if(err) {
       console.log("An error has occured while writing JSON Object to file.");
       return console.log(err);
