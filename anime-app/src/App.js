@@ -1,6 +1,7 @@
 import React from 'react';
 import './App.css';
 import NavBar from './NavBar';
+import AnimeCard from './AnimeCard';
 import {
   createBrowserRouter,
   RouterProvider
@@ -38,6 +39,7 @@ function App() {
   return (
     <div className="App">
         <RouterProvider router={router}/>
+        <AnimeCard />
     </div>
   );
 }
