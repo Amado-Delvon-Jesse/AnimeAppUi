@@ -41,10 +41,13 @@ const AnimeCard = () => {
         return(
             <Card style={{ width: '18rem' }} key={index}>
             <Card.Img variant="top" src={anime.image} />
-            <Card.Body>
+            <Card.Body >
                 <Card.Title>{anime.title}</Card.Title>
                 <Card.Text>
-                {anime.synopsis}
+                {anime.genres.join(" ")} 
+                </Card.Text>
+                <Card.Text>
+                {"rank: " + anime.ranking}
                 </Card.Text>
             </Card.Body>
             </Card>
