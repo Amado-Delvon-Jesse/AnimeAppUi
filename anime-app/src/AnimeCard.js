@@ -42,8 +42,8 @@ const AnimeCard = () => {
             dots: true,
             infinite: false,
             speed: 500,
-            slidesToShow: 4,
-            slidesToScroll: 4,
+            slidesToShow: 5,
+            slidesToScroll: 5,
             initialSlide: 0,
             responsive: [
               {
@@ -78,9 +78,9 @@ const AnimeCard = () => {
         <div className="App">
             <Slider {...settings}>
             {animeList.map((item) => (
-            <Card className="card" key={item}>
-            <Card.Img style={{objectFit: 'none'}} src={item.image} />
-            <Card.Body>
+            <Card key={item}>
+            <Card.Img variant="top" src={item.image} />
+            <Card.Body className="card-body">
                 <Card.Title>{item.title}</Card.Title>
                 <Card.Text>
                 {item.genres.join(" ")} 

@@ -18,14 +18,14 @@ function NavBar() {
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="me-auto">
-            <Nav.Link>
-                <Link to="/">Home</Link>    
+            <Nav.Link as={Link} to="/">
+                Home   
             </Nav.Link>
-            <Nav.Link>
-                <Link to="/top100Anime">Top 100 Anime</Link>
+            <Nav.Link as={Link} to="/top100Anime">
+                Top 100 Anime
             </Nav.Link>
-            <Nav.Link>
-                <Link to="/top100Manga">Top 100 Manga</Link>
+            <Nav.Link as={Link} to="/top100Manga">
+                Top 100 Manga
             </Nav.Link>
             <NavDropdown title="Dropdown" id="collasible-nav-dropdown">
               <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
