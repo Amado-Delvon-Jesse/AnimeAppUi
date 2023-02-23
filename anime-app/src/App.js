@@ -1,6 +1,6 @@
 import React from 'react';
-import './App.css';
-import NavBar from './NavBar';
+import './styles/App.css';
+import NavBar from './components/NavBar';
 import {
   createBrowserRouter,
   RouterProvider

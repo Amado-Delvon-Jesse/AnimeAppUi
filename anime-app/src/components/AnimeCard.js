@@ -2,7 +2,7 @@ import React from "react";
 import {Card, Col, Row, Container} from "react-bootstrap";
 import {useState, useEffect} from 'react';
 import axios from 'axios';
-import './AnimeCard.css';
+import '../styles/AnimeCard.css';
 import "slick-carousel/slick/slick.css"; 
 import "slick-carousel/slick/slick-theme.css";
 import Slider from 'react-slick';
