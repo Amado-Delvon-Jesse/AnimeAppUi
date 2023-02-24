@@ -1,5 +1,5 @@
 import React from "react";
-import {Card, Col, Row, Container} from "react-bootstrap";
+import {Card} from "react-bootstrap";
 import {useState, useEffect} from 'react';
 import axios from 'axios';
 import '../styles/AnimeCard.css';
@@ -12,7 +12,7 @@ import Slider from 'react-slick';
 const AnimeCard = () => {
 
     const [animeList, setAnimeList] = useState([]);
-    const {XRapidAPIHost, XRapidAPIKey} = require('./keys')
+    const {XRapidAPIHost, XRapidAPIKey} = require('../keys')
 
 
     useEffect(() => {
@@ -20,7 +20,7 @@ const AnimeCard = () => {
         const options = {
             method: 'GET',
             url: 'https://anime-db.p.rapidapi.com/anime',
-            params: {page: '1', size: '5', sortBy: 'ranking', sortOrder: 'asc'},
+            params: {page: '1', size: '10', sortBy: 'ranking', sortOrder: 'asc'},
             headers: {
               'X-RapidAPI-Key': XRapidAPIKey,
               'X-RapidAPI-Host': XRapidAPIHost

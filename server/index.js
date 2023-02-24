@@ -2,9 +2,9 @@ let express = require('express');
 let mongoose = require('mongoose');
 let cors = require('cors');
 let bodyParser = require('body-parser');
-const userRoute = require('../server/routes/user.routes')
+const animeRoute = require('./routes/anime.routes')
 mongoose
-  .connect('mongodb://127.0.0.1:27017/mydatabase')
+  .connect('mongodb://127.0.0.1:27017/AnimeDB')
   .then((x) => {
     console.log(`Connected to Mongo! Database name: "${x.connections[0].name}"`)
   })
@@ -17,7 +17,7 @@ app.use(bodyParser.urlencoded({
     extended: true
 }));
 app.use(cors());
-app.use('/users', userRoute)
+app.use('/anime', animeRoute)
 const port = process.env.PORT || 4000;
 const server = app.listen(port, () => {
     console.log('Connected to port ' + port)
