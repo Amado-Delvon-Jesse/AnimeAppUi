@@ -12,30 +12,39 @@ import Slider from 'react-slick';
 const AnimeCard = () => {
 
     const [animeList, setAnimeList] = useState([]);
-    const {XRapidAPIHost, XRapidAPIKey} = require('../keys')
+    // const {XRapidAPIHost, XRapidAPIKey} = require('../keys')
 
+    // constructor(props) {
+    //   super(props);
+    //   this.state = { animeCollection: [] };
+    // }
 
-    useEffect(() => {
+    axios.get('http://localhost:4000/Anime')
+    .then(res => setAnimeList(res.data))
+    .catch(err => console.log(err));
 
-        const options = {
-            method: 'GET',
-            url: 'https://anime-db.p.rapidapi.com/anime',
-            params: {page: '1', size: '10', sortBy: 'ranking', sortOrder: 'asc'},
-            headers: {
-              'X-RapidAPI-Key': XRapidAPIKey,
-              'X-RapidAPI-Host': XRapidAPIHost
-            }
-          };
+      // const options = () => {
+        // method: 'GET',
+        // url: 'https://anime-db.p.rapidapi.com/anime',
+        // params: {page: '1', size: '10', sortBy: 'ranking', sortOrder: 'asc'},
+        // headers: {
+        //   'X-RapidAPI-Key': XRapidAPIKey,
+        //   'X-RapidAPI-Host': XRapidAPIHost
+        // }
 
-        axios.request(options).then(function (response) {
-            console.log(response.data.data);
-            setAnimeList(response.data.data);
+      // }
+
+    // useEffect(() => {
+
+    //     axios.request(options).then(function (response) {
+    //         console.log(response.data.data);
+    //         setAnimeList(response.data.data);
   
-        }).catch(function (error) {
-            console.error(error);
-        });
+    //     }).catch(function (error) {
+    //         console.error(error);
+    //     });
   
-    }, []);
+    // }, []);
       
         
         const settings = {
