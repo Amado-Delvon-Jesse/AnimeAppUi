@@ -6,46 +6,31 @@ import '../styles/AnimeCard.css';
 import "slick-carousel/slick/slick.css"; 
 import "slick-carousel/slick/slick-theme.css";
 import Slider from 'react-slick';
+import AnimeService from "../services/AnimeService";
 
   
 
 const AnimeCard = () => {
 
     const [animeList, setAnimeList] = useState([]);
-    // const {XRapidAPIHost, XRapidAPIKey} = require('../keys')
 
-    // constructor(props) {
-    //   super(props);
-    //   this.state = { animeCollection: [] };
-    // }
+    useEffect(() => {
+      retrieveTop10AnimeHome();
+    }, []);
+    
+    
+    const retrieveTop10AnimeHome = () => {
+        AnimeService.getTop10()
+        .then(response => {
+          setAnimeList(response.data);
+          console.log(response.data);
+        })
+        .catch(e => {
+          console.log(e);
+        });
+    };
 
-    axios.get('http://localhost:4000/Anime')
-    .then(res => setAnimeList(res.data))
-    .catch(err => console.log(err));
 
-      // const options = () => {
-        // method: 'GET',
-        // url: 'https://anime-db.p.rapidapi.com/anime',
-        // params: {page: '1', size: '10', sortBy: 'ranking', sortOrder: 'asc'},
-        // headers: {
-        //   'X-RapidAPI-Key': XRapidAPIKey,
-        //   'X-RapidAPI-Host': XRapidAPIHost
-        // }
-
-      // }
-
-    // useEffect(() => {
-
-    //     axios.request(options).then(function (response) {
-    //         console.log(response.data.data);
-    //         setAnimeList(response.data.data);
-  
-    //     }).catch(function (error) {
-    //         console.error(error);
-    //     });
-  
-    // }, []);
-      
         
         const settings = {
             dots: true,
