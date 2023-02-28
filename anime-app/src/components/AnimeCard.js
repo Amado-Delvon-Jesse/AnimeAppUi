@@ -8,6 +8,7 @@ import "slick-carousel/slick/slick-theme.css";
 import Slider from 'react-slick';
 import AnimeService from "../services/AnimeService";
 
+
   
 
 const AnimeCard = () => {
@@ -29,8 +30,6 @@ const AnimeCard = () => {
           console.log(e);
         });
     };
-
-
         
         const settings = {
             dots: true,
