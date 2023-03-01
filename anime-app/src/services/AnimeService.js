@@ -2,15 +2,15 @@ import http from "../http-commons";
 
 
 const getAll = () => {
-    return http.get("/anime");
+    return http.get("/animeCollection/anime");
 };
 
 const get = id => {
-    return http.get(`/anime/${id}`);
+    return http.get(`/animeCollection/anime/${id}`);
 };
 
 const getTop10 = () => {
-    return http.get("/anime/rankingTop10")
+    return http.get("/animeCollection/anime/rankingTop10")
 };
 
 const AnimeService = {
