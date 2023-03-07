@@ -1,30 +1,7 @@
-// import React from "react";
-// import {useState, useEffect} from 'react';
+import React from "react";
 import '../styles/AnimeCard.css';
-// import AnimeService from "../services/AnimeService";
 
-
-const AnimeCard = ({animeList}) => {
-
-    // const [animeList, setAnimeList] = useState([]);
-
-    // useEffect(() => {
-    //   retrieveTop5AnimeHome();
-    // }, []);
-    
-    
-    // const retrieveTop5AnimeHome = () => {
-    //     AnimeService.getTop5()
-    //     .then(response => {
-    //       setAnimeList(response.data);
-    //       console.log(response.data);
-    //     })
-    //     .catch(e => {
-    //       console.log(e);
-    //     });
-    // };
-        
-
+function AnimeCard(props) {
 
     return ( 
         <div className="render-anime-card">
@@ -40,7 +17,6 @@ const AnimeCard = ({animeList}) => {
             ))}    
         </div>
     );
-
 }
 
 export default AnimeCard;
