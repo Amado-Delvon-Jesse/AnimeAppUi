@@ -1,30 +1,28 @@
-import React from "react";
-import {Card} from "react-bootstrap";
-import {useState, useEffect} from 'react';
-import axios from 'axios';
+// import React from "react";
+// import {useState, useEffect} from 'react';
 import '../styles/AnimeCard.css';
-import AnimeService from "../services/AnimeService";
+// import AnimeService from "../services/AnimeService";
 
 
-const AnimeCard = () => {
+const AnimeCard = ({animeList}) => {
 
-    const [animeList, setAnimeList] = useState([]);
+    // const [animeList, setAnimeList] = useState([]);
 
-    useEffect(() => {
-      retrieveTop5AnimeHome();
-    }, []);
+    // useEffect(() => {
+    //   retrieveTop5AnimeHome();
+    // }, []);
     
     
-    const retrieveTop5AnimeHome = () => {
-        AnimeService.getTop5()
-        .then(response => {
-          setAnimeList(response.data);
-          console.log(response.data);
-        })
-        .catch(e => {
-          console.log(e);
-        });
-    };
+    // const retrieveTop5AnimeHome = () => {
+    //     AnimeService.getTop5()
+    //     .then(response => {
+    //       setAnimeList(response.data);
+    //       console.log(response.data);
+    //     })
+    //     .catch(e => {
+    //       console.log(e);
+    //     });
+    // };
         
 
 
