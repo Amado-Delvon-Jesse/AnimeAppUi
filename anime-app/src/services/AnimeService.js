@@ -9,14 +9,14 @@ const get = id => {
     return http.get(`/animeCollection/anime/${id}`);
 };
 
-const getTop10 = () => {
-    return http.get("/animeCollection/anime/rankingTop10")
+const getTop5 = () => {
+    return http.get("/animeCollection/anime/rankingTop5")
 };
 
 const AnimeService = {
     getAll,
     get,
-    getTop10
+    getTop5
 };
 
 export default AnimeService;
