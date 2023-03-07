@@ -5,17 +5,18 @@ import AnimeService from "../services/AnimeService";
 
 const Home = () => {
 
-    const [animeList, setAnimeList] = useState([]);
+    const [animeListRanked, animeListUpcoming, setAnimeListRanked, setAnimeListUpcoming] = useState([]);
 
     useEffect(() => {
       retrieveTop5AnimeHome();
+      retrieveUpcomingAnimeHome();
     }, []);
     
     
     const retrieveTop5AnimeHome = () => {
         AnimeService.getTop5()
         .then(response => {
-          setAnimeList(response.data);
+          setAnimeListRanked(response.data);
           console.log(response.data);
         })
         .catch(e => {
@@ -23,11 +24,22 @@ const Home = () => {
         });
     };
 
+    const retrieveUpcomingAnimeHome = () => {
+        AnimeService.getUpcomingAnime()
+        .then(response => {
+            setAnimeListUpcoming(response.data);
+            console.log(response.data);
+        })
+        .catch(e => {
+            console.log(e);
+        });
+    };
 
     return(
         <div className="App">
             <h1>Home</h1>
-            <AnimeCard animeList={animeList} />
+            <AnimeCard animeList={animeListRanked} />
+            <AnimeCard animeList={animeListUpcoming}/>
         </div>
 
     )

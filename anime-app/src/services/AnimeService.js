@@ -10,13 +10,18 @@ const get = id => {
 };
 
 const getTop5 = () => {
-    return http.get("/animeCollection/anime/rankingTop5")
+    return http.get("/animeCollection/anime/rankingTop5");
 };
+
+const getUpcomingAnime = () => {
+    return http.get("/animeCollection/anime/upcomingAnime");
+}
 
 const AnimeService = {
     getAll,
     get,
-    getTop5
+    getTop5,
+    getUpcomingAnime
 };
 
 export default AnimeService;
