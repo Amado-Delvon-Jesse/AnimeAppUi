@@ -5,16 +5,14 @@ function AnimeCard(props) {
 
     return ( 
         <div className="render-anime-card">
-            {animeList.map((item) => (
-                <div className="card" key={item}>
+                <div className="card">
                   <div className="card-top">
-                      <img src={item.image} />
+                      <img src={props.image} />
                   </div>
                   <div className="card-bottom">
-                    <p>{item.title}</p>
+                    <p>{props.title}</p>
                   </div>
                 </div>
-            ))}    
         </div>
     );
 }

@@ -5,7 +5,8 @@ import AnimeService from "../services/AnimeService";
 
 const Home = () => {
 
-    const [animeListRanked, animeListUpcoming, setAnimeListRanked, setAnimeListUpcoming] = useState([]);
+    const [animeListRanked, setAnimeListRanked] = useState([]);
+    const [animeListUpcoming, setAnimeListUpcoming] = useState([]);
 
     useEffect(() => {
       retrieveTop5AnimeHome();
@@ -22,7 +23,18 @@ const Home = () => {
         .catch(e => {
           console.log(e);
         });
+
     };
+
+    function createAnimeCardRanked(animeListRanked) {
+        return (
+            <AnimeCard
+            key={animeListRanked.id}
+            image={animeListRanked.image}
+            title={animeListRanked.title}
+            />
+        );
+    }
 
     const retrieveUpcomingAnimeHome = () => {
         AnimeService.getUpcomingAnime()
@@ -33,13 +45,25 @@ const Home = () => {
         .catch(e => {
             console.log(e);
         });
+
+
     };
+
+    function createAnimeCardUpcoming(animeListUpcoming) {
+        return (
+            <AnimeCard
+            key={animeListUpcoming.id}
+            image={animeListUpcoming.image}
+            title={animeListUpcoming.title}
+            />
+        );
+    }
 
     return(
         <div className="App">
             <h1>Home</h1>
-            <AnimeCard animeList={animeListRanked} />
-            <AnimeCard animeList={animeListUpcoming}/>
+            <div className="card-container">{animeListRanked.map(createAnimeCardRanked)}</div>
+            <div className="card-container">{animeListUpcoming.map(createAnimeCardUpcoming)}</div>
         </div>
 
     )
