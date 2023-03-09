@@ -11,7 +11,8 @@ import {
 import Home from './pages/Home'
 import Top100Anime from './pages/Top100Anime';
 import Top50Manga from './pages/Top50Manga';
-import SignUp from './pages/SignUp'
+import SignUp from './pages/SignUp';
+import Login from './pages/Login'
 
 const router = createBrowserRouter([
   {
@@ -32,6 +33,10 @@ const router = createBrowserRouter([
       {
         path: "/signup",
         element: <SignUp />
+      },
+      {
+        path: "/login",
+        element: <Login />
       }
     ]
   }

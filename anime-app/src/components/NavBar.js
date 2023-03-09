@@ -14,7 +14,7 @@ function NavBar() {
     <>
       <Navbar collapseOnSelect expand="xl" bg="dark" variant="dark">
       <Container>
-        <Navbar.Brand href="#home">React-Bootstrap</Navbar.Brand>
+        <Navbar.Brand href="#home">Osusume</Navbar.Brand>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="me-auto">
@@ -22,10 +22,10 @@ function NavBar() {
                 Home   
             </Nav.Link>
             <Nav.Link as={Link} to="/top100Anime">
-                Top 100 Anime
+                Anime
             </Nav.Link>
             <Nav.Link as={Link} to="/top100Manga">
-                Top 100 Manga
+                Manga
             </Nav.Link>
             <NavDropdown title="Dropdown" id="collasible-nav-dropdown">
               <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
@@ -40,7 +40,7 @@ function NavBar() {
             </NavDropdown>
           </Nav>
           <Nav>
-            <Nav.Link href="#deets">More deets</Nav.Link>
+            <Nav.Link as={Link} to="/login">Login</Nav.Link>
             <Nav.Link as={Link} to="/signup">
               Sign Up
             </Nav.Link>
