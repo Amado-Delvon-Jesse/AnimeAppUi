@@ -1,8 +1,10 @@
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
+import '../styles/Signup.css'
 
 function SignUp() {
   return (
+    <div className='signUp-container'>
     <Form>
       <Form.Group className="mb-3" controlId="formBasicEmail">
         <Form.Label>Email address</Form.Label>
@@ -23,6 +25,7 @@ function SignUp() {
         Submit
       </Button>
     </Form>
+    </div>
   );
 }
 
