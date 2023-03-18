@@ -1,14 +1,14 @@
 import React from "react";
 
-const Top100Anime = () => {
+const TopAnime = () => {
 
     return(
         <div className="App">
-            <h1>Top 100 Anime</h1>
+            <h1>Top Anime</h1>
         </div>
 
     )
 
 }
 
-export default Top100Anime;
+export default TopAnime;

@@ -9,8 +9,8 @@ import {
 
 //pages
 import Home from './pages/Home'
-import Top100Anime from './pages/Top100Anime';
-import Top50Manga from './pages/Top50Manga';
+import TopAnime from './pages/TopAnime';
+import TopManga from './pages/TopManga';
 import SignUp from './pages/SignUp';
 import Login from './pages/Login'
 
@@ -23,12 +23,12 @@ const router = createBrowserRouter([
         element: <Home />
       },
       {
-        path: "/Top100Anime",
-        element: <Top100Anime />
+        path: "/TopAnime",
+        element: <TopAnime />
       },
       {
-        path: "/Top100Manga",
-        element: <Top50Manga />
+        path: "/TopManga",
+        element: <TopManga />
       },
       {
         path: "/signup",

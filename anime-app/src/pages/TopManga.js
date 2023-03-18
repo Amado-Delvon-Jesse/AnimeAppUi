@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 
 
-const Top50Manga = () => {
+const TopManga = () => {
 
     const [mangaList, setMangaList] = useState([]);
 
@@ -15,4 +15,4 @@ const Top50Manga = () => {
 
 }
 
-export default Top50Manga;
+export default TopManga;

@@ -2,26 +2,28 @@ import http from "../http-commons";
 
 
 const getAll = () => {
-    return http.get("/animeCollection/anime");
+    return http.get("/JikanAnimeFullCollection/animeTop5");
 };
 
-const get = id => {
-    return http.get(`/animeCollection/anime/${id}`);
+const getByMalId = id => {
+    return http.get("/JikanAnimeFullCollection/${id}")
 };
 
-const getTop5 = () => {
-    return http.get("/animeCollection/anime/rankingTop5");
-};
+// const get = id => {
+//     return http.get(`/animeCollection/anime/${id}`);
+// };
 
-const getUpcomingAnime = () => {
-    return http.get("/animeCollection/anime/upcomingAnime");
-}
+// const getTop5 = () => {
+//     return http.get("/animeCollection/anime/rankingTop5");
+// };
+
+// const getUpcomingAnime = () => {
+//     return http.get("/animeCollection/anime/upcomingAnime");
+// }
 
 const AnimeService = {
     getAll,
-    get,
-    getTop5,
-    getUpcomingAnime
+    getByMalId
 };
 
 export default AnimeService;

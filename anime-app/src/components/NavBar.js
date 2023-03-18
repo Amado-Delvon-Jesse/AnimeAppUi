@@ -21,11 +21,11 @@ function NavBar() {
             <Nav.Link as={Link} to="/">
                 Home   
             </Nav.Link>
-            <Nav.Link as={Link} to="/top100Anime">
-                Anime
+            <Nav.Link as={Link} to="/topAnime">
+                Top Anime
             </Nav.Link>
-            <Nav.Link as={Link} to="/top100Manga">
-                Manga
+            <Nav.Link as={Link} to="/topManga">
+                Top Manga
             </Nav.Link>
             <NavDropdown title="Dropdown" id="collasible-nav-dropdown">
               <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>

@@ -7,10 +7,10 @@ function AnimeCard(props) {
         <div className="render-anime-card">
                 <div className="card">
                   <div className="card-top">
-                      <img src={props.image} />
+                      <img src={props.image} alt="Anime Cover"/>
                   </div>
                   <div className="card-bottom">
-                    <p>{props.title}</p>
+                    <a href="/props.key">{props.title}</a>
                   </div>
                 </div>
         </div>
