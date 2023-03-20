@@ -6,24 +6,18 @@ const getAll = () => {
 };
 
 const getByMalId = id => {
-    return http.get("/JikanAnimeFullCollection/${id}")
+    return http.get("/JikanAnimeFullCollection/")
 };
 
-// const get = id => {
-//     return http.get(`/animeCollection/anime/${id}`);
-// };
+const getSeasonalAnimePaginated = () => {
+    return http.get("/JASNCollection/seasonNow/")
+};
 
-// const getTop5 = () => {
-//     return http.get("/animeCollection/anime/rankingTop5");
-// };
-
-// const getUpcomingAnime = () => {
-//     return http.get("/animeCollection/anime/upcomingAnime");
-// }
 
 const AnimeService = {
     getAll,
-    getByMalId
+    getByMalId,
+    getSeasonalAnimePaginated
 };
 
 export default AnimeService;
