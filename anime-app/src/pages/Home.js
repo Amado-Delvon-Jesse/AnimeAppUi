@@ -1,7 +1,10 @@
 import {useState, useEffect} from "react";
+import Col from 'react-bootstrap/Col';
+import Row from 'react-bootstrap/Row';
+import Container from 'react-bootstrap/Container';
 import AnimeCard from "../components/AnimeCard";
 import AnimeService from "../services/AnimeService";
-import '../styles/Home.css'
+import '../styles/Home.css';
 
 
 const Home = () => {
@@ -50,8 +53,9 @@ const Home = () => {
 
     const RenderCard = (card, index) => {
         return (
-            <div key={index} className="wrapper">
-                <div className="card-top-title">
+            <div key={index}>
+                    <Col>
+                    <div className="card-top-title">
                 <h4 className="card-title">{card.title}</h4>
                 <div className="main-card">  
                 <div className="card-left">
@@ -88,6 +92,7 @@ const Home = () => {
                 </div>
                 </div>
                 </div>
+                    </Col>
             </div>
         );
     }
@@ -96,9 +101,12 @@ const Home = () => {
         <div className="App">
             <h1>Home</h1>
             <div className="card-container">{animeListRanked.map(createAnimeCardRanked)}</div>
-            <div className="seasonal-container">
+            <Container>
+            <Row lg={3}>
             <div>{animeListSeasonal.map(RenderCard)}</div>
-            </div>
+            </Row>
+            </Container>
+
         </div>
     )
     }

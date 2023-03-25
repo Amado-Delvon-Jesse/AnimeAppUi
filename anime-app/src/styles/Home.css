@@ -49,13 +49,6 @@ h4 {
     width: 550px;
 }
 
-
-
-.seasonal-container {
-    margin: 90px auto;
-}
-
-.wrapper {
-    max-width: 650px;
-    display: flex;
+.container {
+    width: 100%;
 }
