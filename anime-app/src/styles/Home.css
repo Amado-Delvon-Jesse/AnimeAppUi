@@ -3,14 +3,6 @@
     height: 265px;  
 }
 
-/* .seasonal-container {
-    padding-top: 15rem;
-    display: flex;
-} */
-
-.card-title h5 {
-    display: flex;
-}
 
 .main-card {
     display: flex;
@@ -31,4 +23,39 @@
     display: -webkit-box;
     -webkit-line-clamp: 3;
     -webkit-box-orient: vertical;
+}
+
+.card-info {
+    width: 100%;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+}
+
+.card-details {
+    width: 90%;
+	padding: 30px;
+	margin-top: -25px;
+}
+
+
+h4 {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    width: 550px;
+}
+
+
+
+.seasonal-container {
+    margin: 90px auto;
+}
+
+.wrapper {
+    max-width: 650px;
+    display: flex;
 }

@@ -51,17 +51,30 @@ const Home = () => {
     const RenderCard = (card, index) => {
         return (
             <div key={index} className="wrapper">
+                <div className="card-top-title">
+                <h4 className="card-title">{card.title}</h4>
                 <div className="main-card">  
                 <div className="card-left">
                 <img alt="" src={card.images.jpg.image_url}/>
                 </div>
                 <div className="card-right">
                 <div className="card-details">
-                <h4>{card.title}</h4>
-                <div className="card-info">
                 <p className="synopsis">{card.synopsis}</p>
+                <div className="card-info">
                 <p>{card.type}</p>
                 <p>{card.year}</p>
+                <div className="studios-container">
+                    {card.studios.map((studio, index) => {
+                        return (
+                            <div key={index}>
+                                <p>{studio.name}</p>
+                            </div>
+                        )
+                    })
+
+                    }
+                </div>
+                </div>
                 <div className="genre-container">
                 {card.genres.map((genre, index) => {
                     return (
