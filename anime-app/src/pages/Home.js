@@ -1,9 +1,7 @@
 import {useState, useEffect} from "react";
 import AnimeCard from "../components/AnimeCard";
 import AnimeService from "../services/AnimeService";
-import Col from 'react-bootstrap/Col';
-import Row from 'react-bootstrap/Row';
-import Card from 'react-bootstrap/Card';
+import '../styles/Home.css'
 
 
 const Home = () => {
@@ -49,19 +47,35 @@ const Home = () => {
         });
     };
 
+
     const RenderCard = (card, index) => {
         return (
-            <Card key={index}>
-                <Card.Img variant="top" src="holder.js/100px160" />
-                <Card.Body>
-                <Card.Title>{card.title}</Card.Title>
-                <Card.Text>
-                    This is a longer card with supporting text below as a natural
-                    lead-in to additional content. This content is a little bit
-                    longer.
-                </Card.Text>
-                </Card.Body>
-            </Card>
+            <div key={index} className="wrapper">
+                <div className="main-card">  
+                <div className="card-left">
+                <img alt="" src={card.images.jpg.image_url}/>
+                </div>
+                <div className="card-right">
+                <div className="card-details">
+                <h4>{card.title}</h4>
+                <div className="card-info">
+                <p className="synopsis">{card.synopsis}</p>
+                <p>{card.type}</p>
+                <p>{card.year}</p>
+                <div className="genre-container">
+                {card.genres.map((genre, index) => {
+                    return (
+                        <div key={index}>
+                        <p className="genre-item">{genre.name}</p>
+                        </div>
+                    )
+                })}
+                </div>
+                </div>
+                </div>
+                </div>
+                </div>
+            </div>
         );
     }
 
@@ -69,7 +83,9 @@ const Home = () => {
         <div className="App">
             <h1>Home</h1>
             <div className="card-container">{animeListRanked.map(createAnimeCardRanked)}</div>
+            <div className="seasonal-container">
             <div>{animeListSeasonal.map(RenderCard)}</div>
+            </div>
         </div>
     )
     }

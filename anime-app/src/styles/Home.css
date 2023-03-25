@@ -1,0 +1,34 @@
+.card-img-cover {
+    width: 185px;
+    height: 265px;  
+}
+
+/* .seasonal-container {
+    padding-top: 15rem;
+    display: flex;
+} */
+
+.card-title h5 {
+    display: flex;
+}
+
+.main-card {
+    display: flex;
+    max-width: 600px;
+    margin: 50px auto;
+}
+
+.genre-container {
+    display: flex;
+}
+
+.genre-item {
+    padding-right: 15px;
+}
+
+.synopsis {
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+}
